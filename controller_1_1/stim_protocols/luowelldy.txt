@@ -1,0 +1,2 @@
+Pulse 7200.0 1.0 500                       # pulsing for 10.0 s at 1.0 Hz with 500 ms pulse width
+

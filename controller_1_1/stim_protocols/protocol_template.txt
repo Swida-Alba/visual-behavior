@@ -1,0 +1,64 @@
+Play                                     # playing video stimulus
+
+ISI 6                                    # inter-stimulus interval: 6.000 s, with ms precision
+
+r/v 40                                   # set r/v to 40
+
+ISI 5.3                                  # inter-stimulus interval: 5.300 s
+
+Play                                     # playing video stimulus
+
+ISI 13.321                               # inter-stimulus interval: 13.321 s
+
+Play 5                                   # playing video for 5 times
+
+ISI 10.675                               # inter-stimulus interval: 10.675 s
+
+Set_Attribute r2v=20                     # set parameter r2v=20, which is equivalent to "r/v 20"
+
+ISI 10                                   # inter-stimulus interval: 10 s
+
+Set_Attribute loom_retention=0           # set parameter loom_retention=0
+
+ISI 5                                    # inter-stimulus interval: 5 s
+
+Play 5                                   # playing video for 5 times
+
+ISI 2.5                                  # inter-stimulus interval: 2.5 s
+
+LED                                      # LED ON
+
+ISI 3.327                                # inter-stimulus interval: 3.327 s
+
+Play                                     # playing video stimulus
+
+ISI 1                                    # inter-stimulus interval: 1.000 s
+
+LED                                      # LED OFF
+
+ISI 1                                    # inter-stimulus interval: 1.000 s
+
+LEDandLoom 0.0                           # coordinated playing video and LED with timer = 0 ms
+
+ISI 1                                    # inter-stimulus interval: 1.000 s
+
+Set_Attribute update_timer=0             # set parameter update_timer=0
+
+LEDandLoom 0.0                           # coordinated playing video and LED with timer = 0 ms
+
+ISI 1                                    # inter-stimulus interval: 1.000 s
+
+Set_Attribute update_timer=True          # set parameter update_timer=True
+
+LEDandLoom 3.0                           # coordinated playing video and LED with timer = 3000 ms
+
+ISI 1                                    # inter-stimulus interval: 1.000 s
+
+Pulse 5.0 2.0 100                        # pulsing for 5.0 s at 2.0 Hz with 100 ms pulse width
+
+ISI 1                                    # inter-stimulus interval: 1.000 s
+
+Set_Attribute update_pulse=0             # set parameter update_pulse=0
+
+Pulse 5.0 2.0 100                        # pulsing for 5.0 s at 2.0 Hz with 100 ms pulse width
+

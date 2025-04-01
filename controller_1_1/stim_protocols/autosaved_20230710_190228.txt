@@ -1,0 +1,58 @@
+Pulse 20.0 5.0 50                        # pulsing for 20.0 s at 5.0 Hz with 50 ms pulse width
+
+ISI 25.267                               # inter-stimulus interval: 25.267 s
+
+r/v 80                                   # set r/v to 80
+
+ISI 67.047                               # inter-stimulus interval: 67.047 s
+
+Play 20                                  # playing video for 20 times
+
+ISI 28.547                               # inter-stimulus interval: 28.547 s
+
+Pulse 10.0 10.0 50                       # pulsing for 10.0 s at 10.0 Hz with 50 ms pulse width
+
+ISI 55.379                               # inter-stimulus interval: 55.379 s
+
+Pulse 20.0 2.0 50                        # pulsing for 20.0 s at 2.0 Hz with 50 ms pulse width
+
+ISI 35.818                               # inter-stimulus interval: 35.818 s
+
+Pulse 20.0 2.0 10                        # pulsing for 20.0 s at 2.0 Hz with 10 ms pulse width
+
+ISI 35.965                               # inter-stimulus interval: 35.965 s
+
+Pulse 20.0 10.0 10                       # pulsing for 20.0 s at 10.0 Hz with 10 ms pulse width
+
+ISI 87.900                               # inter-stimulus interval: 87.900 s
+
+Pulse 20.0 10.0 50                       # pulsing for 20.0 s at 10.0 Hz with 50 ms pulse width
+
+ISI 88.790                               # inter-stimulus interval: 88.790 s
+
+Pulse 20.0 50.0 5                        # pulsing for 20.0 s at 50.0 Hz with 5 ms pulse width
+
+ISI 39.279                               # inter-stimulus interval: 39.279 s
+
+Play 10                                  # playing video for 10 times
+
+ISI 67.566                               # inter-stimulus interval: 67.566 s
+
+Play 20                                  # playing video for 20 times
+
+ISI 9.506                                # inter-stimulus interval: 9.506 s
+
+r/v 40                                   # set r/v to 40
+
+ISI 44.644                               # inter-stimulus interval: 44.644 s
+
+Play 20                                  # playing video for 20 times
+
+ISI 9.816                                # inter-stimulus interval: 9.816 s
+
+Set_Attribute update_pulse=0             # set parameter update_pulse=0
+
+ISI 26.629                               # inter-stimulus interval: 26.629 s
+
+Pulse 20.0 50.0 5                        # pulsing for 20.0 s at 50.0 Hz with 5 ms pulse width
+
