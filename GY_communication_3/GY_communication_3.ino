@@ -6,7 +6,7 @@ receiving command from PC to switch ON/OFF the LED or deliver pulses
 Note: for the "pulse" ("p") mode, pulse on is set at the start of the period.
  */
 
-int pin = 10; // the pin to control relay
+int pin = 13; // the pin to control relay
 int indicator_pin = 9; // indicator for LED, coordiated with "pin"
 const long baudRate = 9600;
 String light_switch; // read command from serial
