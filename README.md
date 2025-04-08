@@ -52,7 +52,7 @@ A comprehensive system for delivering high-frequency visual stimuli and analyzin
    conda activate visual-behavior
    ```
    
-   Install the required packages from requirements.txt:
+   Install the required packages from `requirements.txt`:
    ```
    pip install -r requirements.txt
    ```
@@ -70,13 +70,13 @@ A comprehensive system for delivering high-frequency visual stimuli and analyzin
    pip install -r requirements.txt
    ```
 
-3. Connect Arduino with appropriate firmware loaded
+3. Connect Arduino with appropriate firmware loaded.
 
 ## Quick Start
 
 1. Navigate to the controller directory:
    ```
-   cd controller_2_2
+   cd controller_2_1_1
    ```
 
 2. Run the default configuration:
@@ -94,11 +94,11 @@ Edit the `play.py` file to customize your experiment setup:
 from StimulationAssistant import StimController
 
 player = StimController(
-    video_dir = 'path/to/your/video/files',
-    stim_name = 'r/v',  # Customize stimulus naming
-    stimulus = '20',    # Default stimulus to use
-    LED_retention = 2000,  # LED retention time in ms
-    video_retention = 1000,  # Video retention time in ms
+    video_dir='path/to/your/video/files',
+    stim_name='r/v',  # Customize stimulus naming
+    stimulus='20',    # Default stimulus to use
+    LED_retention=2000,  # LED retention time in ms
+    video_retention=1000,  # Video retention time in ms
     # Add other parameters as needed
 )
 
@@ -109,8 +109,8 @@ player.start_journey()
 
 The system provides numerous commands for interactive control:
 
-- `<Enter>` - Play video stimulus
-- `v` - Deliver video stimulus for multiple times
+- `v` - Deliver a single video stimulus
+- `v[number]` - Deliver video stimulus multiple times (e.g., `v5` for 5 times)
 - `r` - Toggle red LED on/off
 - `rX` - Turn on LED for X seconds (e.g., `r5` for 5 seconds)
 - `p` - Deliver LED pulses
@@ -125,6 +125,7 @@ The system provides numerous commands for interactive control:
 - `isiX` - Wait for X seconds (e.g., `isi5` for 5 seconds)
 - `load` - Run available local protocol files
 - `h` or `help` - Show help information
+- `q` - Quit the program
 
 ### Advanced Commands
 
@@ -134,7 +135,7 @@ The system provides numerous commands for interactive control:
 
 ## Folder Structure
 
-- `controller_2_2/` - Main controller code
+- `controller_2_1_1/` - Main controller code
   - `StimulationAssistant.py` - Core controller class
   - `stimfunc.py` - Helper functions for stimulation
   - `play.py` - Example configuration
@@ -147,11 +148,3 @@ The system provides numerous commands for interactive control:
 - **Serial port errors**: Try restarting the program. If the error persists, check your Arduino connection.
 - **Video playback issues**: Ensure the video path is correctly set and video files are in the proper format.
 - **Performance problems**: Try closing other resource-intensive applications to ensure smooth video playback.
-
-## License
-
-[Insert license information here]
-
-## Credits
-
-[Insert credits/contributors here]
