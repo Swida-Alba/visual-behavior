@@ -1,0 +1,9 @@
+# Command shortcuts file
+# Format: shortcut_name <- command > command > command
+
+# Example shortcuts:
+ls                     <- shortcuts
+odorA_pulse            <- pump:on > odor_a:on > isi5 > odor_a:off > pump:off
+light_trigger          <- trig > r5 > isi2 > trig
+2_odor_pulse           <- odorA_pulse > odorA_pulse
+

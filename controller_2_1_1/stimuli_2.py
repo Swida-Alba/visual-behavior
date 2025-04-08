@@ -1,5 +1,5 @@
 import os
-from LoomingFunc import GenerateLoomingImgs, img2video
+from stimfunc import GenerateLoomingImgs, img2video
 
 bgc = 'b' # 'w' for white, 'b' for blue
 shape = 'circle' # 'full' for end with full screen, 'circle' for end with the largest circle
