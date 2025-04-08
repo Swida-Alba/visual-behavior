@@ -157,7 +157,6 @@ def write_video_log(log_path, real_fps, read_fps, r2v, t_play, t_end, LED_state,
 #         print('\n\033[33mNo {} is connected.\nSerial communication is unavailable.\033[0m\n'.format(board_type))
 #     return ser
 def SetUpSerialPort(board_type='Arduino Uno', baud_rate = 9600, require_confirm=False, **kwargs):
-    # modified from LoomingFunc.py
     current_os = platform.system()
     Port = ''
     port_list = list(serial.tools.list_ports.comports())
