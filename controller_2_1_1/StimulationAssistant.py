@@ -1341,6 +1341,12 @@ class StimController:
                 key_input = input(self.prompt)
                 self.ClearSerialBuffer()
                 
+                # Log the original input command with a timestamp
+                if self.log_file:
+                    with open(self.log_file, 'a') as log:
+                        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                        log.write(f"[{timestamp}] Input: {key_input}\n")
+                
                 # Check for shortcut creation syntax
                 if '<-' in key_input:
                     parts = key_input.split('<-', 1)
