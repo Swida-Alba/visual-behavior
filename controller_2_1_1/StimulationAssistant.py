@@ -206,6 +206,11 @@ class StimController:
         print(f'Log file will be saved as: {self.log_name}')
         
         self.log_file = os.path.join(self.save_path, self.log_name)
+        # write to log file
+        with open(self.log_file, 'a') as log:
+            log.write('=' * 50 + '\n')
+            log.write(f'New cycle started at {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
+            log.write('=' * 50 + '\n')
         
         # Initialize shortcuts dictionary
         self.shortcuts = {}
@@ -521,6 +526,9 @@ class StimController:
             
         command_series = self.shortcuts[shortcut_name]
         print(f"Executing shortcut '{shortcut_name}': {command_series}")
+        # write to log
+        with open(self.log_file, 'a') as log:
+            log.write(f"Executing shortcut '{shortcut_name}': {command_series}\n")
         
         # Fully expand all nested shortcuts first
         expanded_series = self.expand_shortcuts(command_series)
@@ -706,6 +714,7 @@ class StimController:
         uindow = playstim.initialize_window(img_to_show=umage,window='umage_uindow',window_size=(400,600),window_pos=(800,150),full_screen=False,always_on_top=True)
         cv2.waitKey(max(int(self.u_time * 1000),1))
         cv2.destroyWindow(uindow)
+        cv2.waitKey(1)
         return 0
         
     def terminate(self):
@@ -975,6 +984,9 @@ class StimController:
         if cmd_write and cmt_write:
             with open(self.protocol_saveas,'a') as f:
                 f.write(cmd_write + ' '*(40-len(cmd_write)) + ' # ' + cmt_write + '\n\n')
+            # write to log
+            with open(self.log_file, 'a') as log:
+                log.write(f'Executed: {cmd_write} # {cmt_write}\n\n')
         
         return 0
     
@@ -1559,6 +1571,9 @@ class StimController:
             
         # Now execute the validated commands
         print(f"Executing command series: {' > '.join(validated_commands)}")
+        # write to log
+        with open(self.log_file, 'a') as log:
+            log.write(f"Executing command series: {' > '.join(validated_commands)}\n")
         results = []
         
         # Track timing for dynamic ISI adjustments
@@ -1602,6 +1617,10 @@ class StimController:
             if result == 0:
                 original_cmd = validated_commands[i]
                 self.write_protocols(original_cmd, skip_isi=True)
+            else:
+                # write to log
+                with open(self.log_file, 'a') as log:
+                    log.write(f"Command {i+1} failed: {cmd}\n")
             
             # Calculate actual time taken for this command
             command_end_time = time.time()
